@@ -123,7 +123,6 @@ lvim.plugins = {
   },
   {
     "folke/noice.nvim",
-    enabled = ENABLE_NOICE,
     lazy = true,
     event = { "BufRead", "BufNewFile" },
     dependencies = { "rcarriga/nvim-notify", "MunifTanjim/nui.nvim" },

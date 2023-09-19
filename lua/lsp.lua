@@ -9,6 +9,7 @@ linters.setup({
   },
   {
     command = "cspell",
+    args = { "--severity", "warning" },
   },
   {
     command = "stylelint",

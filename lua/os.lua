@@ -20,6 +20,6 @@ if system == "Windows" then
     paste = {
       ["+"] = "win32yank.exe -o --lf",
       ["*"] = "win32yank.exe -o --lf",
-  },
-}
+    },
+  }
 end
