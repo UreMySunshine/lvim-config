@@ -3,9 +3,9 @@
 -- Forum: https://www.reddit.com/r/lunarvim/
 -- Discord: https://discord.com/invite/Xb9B4Ny
 
-require "plugin"
-require "lsp"
+require "plugin.init"
+require "lsp.init"
 require "os"
 require "theme"
 require "settings"
-require "keymappings"
+require "keybindings"
