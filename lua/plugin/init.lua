@@ -49,6 +49,10 @@ lvim.plugins = {
     end
   },
   {
+    "sindrets/diffview.nvim",
+    event = "BufRead",
+  },
+  {
     "mrjones2014/nvim-ts-rainbow",
   },
   {
