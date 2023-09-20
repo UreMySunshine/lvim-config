@@ -17,7 +17,7 @@ local cspell_config = {
       end
     end
     return cspell_json_file
-  end
+  end,
 }
 
 local null_ls = require("null-ls")

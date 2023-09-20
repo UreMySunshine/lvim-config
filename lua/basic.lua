@@ -25,6 +25,7 @@ vim.api.nvim_create_autocmd("QuitPre", {
 -- rainbow surrounding
 lvim.builtin.treesitter.rainbow.enable = true
 -- autoformat
-lvim.format_on_save = true
--- spell check
-vim.opt.spell = true
+lvim.format_on_save = {
+  enabled = true,
+  timeout = 5000,
+}

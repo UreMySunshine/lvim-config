@@ -220,18 +220,6 @@ lvim.plugins = {
     end,
   },
   {
-    "petertriho/nvim-scrollbar",
-    dependencies = {
-      "kevinhwang91/nvim-hlslens",
-      "lewis6991/gitsigns.nvim",
-    },
-    config = function()
-      require("scrollbar").setup()
-      require("scrollbar.handlers.search").setup({})
-      require("scrollbar.handlers.gitsigns").setup({})
-    end,
-  },
-  {
     "folke/persistence.nvim",
     -- Restore last session of current dir
     lazy = true,
@@ -242,6 +230,12 @@ lvim.plugins = {
         options = { "buffers", "curdir", "tabpages", "winsize" },
         pre_save = nil,
       })
+    end,
+  },
+  {
+    "windwp/nvim-ts-autotag",
+    config = function()
+      require("nvim-ts-autotag").setup()
     end,
   },
 }

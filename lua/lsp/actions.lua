@@ -4,5 +4,8 @@ code_actions.setup({
     command = "proselint",
     args = { "--json" },
     filetypes = { "markdown", "tex" },
+  },
+  {
+    command = "eslint",
   }
 })
