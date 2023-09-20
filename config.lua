@@ -5,7 +5,7 @@
 
 require "plugin.init"
 require "lsp.init"
-require "os"
-require "theme"
-require "settings"
+require "platform"
+require "colorscheme"
+require "basic"
 require "keybindings"
