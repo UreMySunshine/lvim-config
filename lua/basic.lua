@@ -27,5 +27,6 @@ lvim.builtin.treesitter.rainbow.enable = true
 -- autoformat
 lvim.format_on_save = {
   enabled = true,
-  timeout = 5000,
+  timeout = 2000,
 }
+vim.g.hidden = true

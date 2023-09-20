@@ -234,4 +234,7 @@ lvim.plugins = {
       require("nvim-ts-autotag").setup()
     end,
   },
+  {
+    "sindrets/diffview.nvim",
+  }
 }
