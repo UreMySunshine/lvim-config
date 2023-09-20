@@ -11,15 +11,12 @@ lvim.builtin.which_key.mappings["t"] = {
   r = { "<cmd>TroubleToggle lsp_references<cr>", "references" },
 }
 -- spectre
-vim.keymap.set('n', '<leader>sw', '<cmd>lua require("spectre").open_visual({select_word=true})<CR>', {
-  desc = "Search current word"
-})
-vim.keymap.set('v', '<leader>sw', '<esc><cmd>lua require("spectre").open_visual()<CR>', {
-  desc = "Search current word"
-})
-vim.keymap.set('n', '<leader>sp', '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>', {
-  desc = "Search on current file"
-})
+lvim.lsp.buffer_mappings.normal_mode["<leader>sw"] = { "<cmd>lua require('spectre').open_visual({select_word=true})<cr>",
+  "Search current word" }
+lvim.lsp.buffer_mappings.normal_mode["<leader>sp"] = {
+  "<cmd>lua require('spectre').open_file_search({select_word=true})<cr>", "Search on current file" }
+lvim.lsp.buffer_mappings.visual_mode["<leader>sw"] = { "<esc><cmd>lua require('spectre').open_visual()<cr>",
+  "Search on current word" }
 -- session
 lvim.builtin.which_key.mappings["S"] = {
   name = "+Session",
