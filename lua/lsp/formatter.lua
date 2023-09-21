@@ -2,8 +2,7 @@ local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup({
   {
     command = "prettier",
-    filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue", "css", "scss", "less", "html",
-      "json", "jsonc", "yaml", "markdown", "markdown.mdx", "graphql", "handlebars" },
+    filetypes = { "html", "json", "jsonc", "yaml", "markdown", "markdown.mdx", "graphql", "handlebars" },
   },
   {
     command = "stylelint",
