@@ -264,5 +264,73 @@ lvim.plugins = {
   },
   {
     "sindrets/diffview.nvim",
-  }
+  },
+  {
+    'echasnovski/mini.map',
+    config = function()
+      local map = require("mini.map")
+      map.setup({
+        -- Highlight integrations (none by default)
+        integrations = {
+          map.gen_integration.builtin_search(),
+          map.gen_integration.gitsigns(),
+          map.gen_integration.diagnostic(),
+        },
+
+        -- Symbols used to display data
+        symbols = {
+          -- Encode symbols. See `:h MiniMap.config` for specification and
+          -- `:h MiniMap.gen_encode_symbols` for pre-built ones.
+          -- Default: solid blocks with 3x2 resolution.
+          encode = map.gen_encode_symbols.dot('4x2'),
+
+          -- Scrollbar parts for view and line. Use empty string to disable any.
+          scroll_line = '█',
+          scroll_view = '┃',
+        },
+
+        -- Window options
+        window = {
+          -- Whether window is focusable in normal way (with `wincmd` or mouse)
+          focusable = false,
+
+          -- Side to stick ('left' or 'right')
+          side = 'right',
+
+          -- Whether to show count of multiple integration highlights
+          show_integration_count = true,
+
+          -- Total width
+          width = 10,
+
+          -- Value of 'winblend' option
+          winblend = 25,
+        },
+      })
+    end,
+  },
+  {
+    "okuuva/auto-save.nvim",
+    config = function()
+      require("auto-save").setup({
+        trigger_events = {                              -- See :h events
+          immediate_save = { "BufLeave", "FocusLost" }, -- vim events that trigger an immediate save
+          defer_save = {},                              -- vim events that trigger a deferred save (saves after `debounce_delay`)
+          cancel_defered_save = {},                     -- vim events that cancel a pending deferred save
+        },
+        condition = function(buf)
+          local fn = vim.fn
+          local utils = require("auto-save.utils.data")
+
+          if
+              fn.getbufvar(buf, "&modifiable") == 1 and
+              utils.not_in(fn.getbufvar(buf, "&filetype"), { "TelescopePrompt" }) and
+              utils.not_in(fn.getbufvar(buf, "&buftype"), { "prompt" }) then
+            return true -- met condition(s), can save
+          end
+          return false  -- can't save
+        end,
+      })
+    end,
+  },
 }
