@@ -24,6 +24,7 @@ local null_ls = require("null-ls")
 null_ls.setup({
   sources = {
     null_ls.builtins.diagnostics.cspell.with({
+      config = cspell_config,
       -- Force the severity to be HINT
       diagnostics_postprocess = function(diagnostic)
         diagnostic.severity = vim.diagnostic.severity.WARN
