@@ -1,7 +1,8 @@
 -- setup mapping to call :LazyGit
 lvim.builtin.which_key.mappings['gg'] = { "<cmd>:LazyGit<cr>", "Float LazyGit" }
 -- diffview
-lvim.builtin.which_key.mappings["gd"] = {
+lvim.builtin.which_key.mappings["gD"] = {
+  name = "Diffview",
   o = { "<cmd>DiffviewOpen<cr>", "Open DiffView" },
   c = { "<cmd>set hidden<cr><cmd>DiffviewClose<cr>", "Close DiffView" },
   f = { "<cmd>DiffviewFileHistory<cr>", "File History" },
