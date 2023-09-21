@@ -1,3 +1,5 @@
+require "plugin.auto-save"
+
 lvim.plugins = {
   {
     "zbirenbaum/copilot-cmp",
