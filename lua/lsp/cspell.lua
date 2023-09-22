@@ -20,6 +20,9 @@ local cspell_config = {
   end,
 }
 
+local filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue", "css", "scss", "less",
+  "html", "json", "jsonc", "yaml", "markdown", "markdown.mdx", "graphql", "handlebars", "lua" }
+
 local null_ls = require("null-ls")
 null_ls.setup({
   sources = {
@@ -29,6 +32,7 @@ null_ls.setup({
       diagnostics_postprocess = function(diagnostic)
         diagnostic.severity = vim.diagnostic.severity.WARN
       end,
+      filetypes = filetypes
     }),
     null_ls.builtins.code_actions.cspell.with({
       config = cspell_config,
@@ -41,7 +45,8 @@ null_ls.setup({
             cspell_config_file
           )
         )
-      end
+      end,
+      filetypes = filetypes
     })
   }
 })
