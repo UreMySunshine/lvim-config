@@ -6,6 +6,6 @@ code_actions.setup({
     filetypes = { "markdown", "tex" },
   },
   {
-    command = "eslint",
+    command = "eslint_d",
   }
 })

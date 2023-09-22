@@ -22,9 +22,9 @@ vim.api.nvim_create_autocmd("QuitPre", {
     end
   end
 })
+lvim.builtin.nvimtree.setup.filters.custom = { ".git", ".DS_Store" }
 -- autoformat
 lvim.format_on_save = {
   enabled = true,
   timeout = 2000,
 }
-vim.g.hidden = true

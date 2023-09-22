@@ -10,7 +10,7 @@ formatters.setup({
 
   },
   {
-    command = "eslint",
+    command = "eslint_d",
     filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
   },
 })

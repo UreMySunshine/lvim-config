@@ -5,7 +5,7 @@ linters.setup({
     args = { "--severity", "warning" },
   },
   {
-    command = "eslint",
+    command = "eslint_d",
   },
   {
     command = "stylelint",

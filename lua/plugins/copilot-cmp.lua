@@ -18,8 +18,8 @@ return {
           },
         },
         panel = { enabled = false },
-      })                               -- https://github.com/zbirenbaum/copilot.lua/blob/master/README.md#setup-and-configuration
-      require("copilot_cmp").setup()   -- https://github.com/zbirenbaum/copilot-cmp/blob/master/README.md#configuration
+      })                             -- https://github.com/zbirenbaum/copilot.lua/blob/master/README.md#setup-and-configuration
+      require("copilot_cmp").setup() -- https://github.com/zbirenbaum/copilot-cmp/blob/master/README.md#configuration
     end, 100)
   end,
 }

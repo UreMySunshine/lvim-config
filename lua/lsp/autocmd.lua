@@ -12,9 +12,7 @@ lvim.autocommands = {
       group = "autosave",
       callback = function(opts)
         if opts.data.saved_buffer ~= nil then
-          vim.lsp.buf.format({
-            timeout_ms = 2000,
-          })
+          vim.cmd("lua require('lvim.lsp.utils').format()")
         end
       end,
     },
