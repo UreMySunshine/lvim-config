@@ -1,9 +1,4 @@
--- return true if os is windows
-local function get_is_windows()
-  return "\\" == package.config:sub(1, 1)
-end
-
-local is_windows = get_is_windows()
+local is_windows = vim.loop.os_uname().sysname:find "Windows"
 
 if is_windows then
   -- Enable powershell as your default shell
