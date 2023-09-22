@@ -23,5 +23,6 @@ return {
         'RainbowDelimiterCyan',
       },
     }
+    lvim.builtin.treesitter.rainbow.enable = true
   end
 }

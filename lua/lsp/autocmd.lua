@@ -5,17 +5,18 @@ lvim.autocommands = {
       command = ":lua MiniMap.open()"
     },
   },
+  {
+    "User",
+    {
+      pattern = { "AutoSaveWritePre" },
+      group = "autosave",
+      callback = function(opts)
+        if opts.data.saved_buffer ~= nil then
+          vim.lsp.buf.format({
+            timeout_ms = 2000,
+          })
+        end
+      end,
+    },
+  },
 }
--- format before auto-save
-local group = vim.api.nvim_create_augroup('autosave', {})
-vim.api.nvim_create_autocmd('User', {
-  pattern = 'AutoSaveWritePre',
-  group = group,
-  callback = function(opts)
-    if opts.data.saved_buffer ~= nil then
-      vim.lsp.buf.format({
-        timeout_ms = 2000,
-      })
-    end
-  end,
-})

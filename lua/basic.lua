@@ -22,9 +22,6 @@ vim.api.nvim_create_autocmd("QuitPre", {
     end
   end
 })
--- rainbow surrounding
-lvim.builtin.treesitter.rainbow.enable = true
-lvim.builtin.treesitter.autotag.enable = true
 -- autoformat
 lvim.format_on_save = {
   enabled = true,
