@@ -13,4 +13,7 @@ formatters.setup({
     command = "eslint_d",
     filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
   },
+  {
+    command = "rustfmt",
+  },
 })
