@@ -7,16 +7,15 @@ lvim.builtin.treesitter.ensure_installed = {
 
 vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "rust_analyzer" })
 
-local mason_path = vim.fn.glob(vim.fn.stdpath "data" .. "/mason/")
-
-local codelldb_path = mason_path .. "bin/codelldb"
-local liblldb_path = mason_path .. "packages/codelldb/extension/lldb/lib/liblldb"
+local extension_path = vim.env.HOME .. "/.vscode/extensions/vadimcn.vscode-lldb-1.10.0/"
+local codelldb_path = extension_path .. "adapter/codelldb"
+local liblldb_path = extension_path .. "lldb/lib/liblldb"
 local this_os = vim.loop.os_uname().sysname
 
 -- The path in windows is different
 if this_os:find "Windows" then
-  codelldb_path = mason_path .. "packages\\codelldb\\extension\\adapter\\codelldb.exe"
-  liblldb_path = mason_path .. "packages\\codelldb\\extension\\lldb\\bin\\liblldb.dll"
+  codelldb_path = extension_path .. "adapter\\codelldb.exe"
+  liblldb_path = extension_path .. "lldb\\bin\\liblldb.dll"
 else
   -- The liblldb extension is .so for linux and .dylib for macOS
   liblldb_path = liblldb_path .. (this_os == "Linux" and ".so" or ".dylib")
@@ -53,80 +52,6 @@ pcall(function()
           end,
         })
       end,
-      crate_graph = {
-        -- Backend used for displaying the graph
-        -- see: https://graphviz.org/docs/outputs/
-        -- default: x11
-        backend = "jpg",
-        -- where to store the output, nil for no output stored (relative
-        -- path from pwd)
-        -- default: nil
-        output = nil,
-        -- true for all crates.io and external crates, false only the local
-        -- crates
-        -- default: true
-        full = true,
-
-        -- List of backends found on: https://graphviz.org/docs/outputs/
-        -- Is used for input validation and autocompletion
-        -- Last updated: 2021-08-26
-        enabled_graphviz_backends = {
-          "bmp",
-          "cgimage",
-          "canon",
-          "dot",
-          "gv",
-          "xdot",
-          "xdot1.2",
-          "xdot1.4",
-          "eps",
-          "exr",
-          "fig",
-          "gd",
-          "gd2",
-          "gif",
-          "gtk",
-          "ico",
-          "cmap",
-          "ismap",
-          "imap",
-          "cmapx",
-          "imap_np",
-          "cmapx_np",
-          "jpg",
-          "jpeg",
-          "jpe",
-          "jp2",
-          "json",
-          "json0",
-          "dot_json",
-          "xdot_json",
-          "pdf",
-          "pic",
-          "pct",
-          "pict",
-          "plain",
-          "plain-ext",
-          "png",
-          "pov",
-          "ps",
-          "ps2",
-          "psd",
-          "sgi",
-          "svg",
-          "svgz",
-          "tga",
-          "tiff",
-          "tif",
-          "tk",
-          "vml",
-          "vmlz",
-          "wbmp",
-          "webp",
-          "xlib",
-          "x11",
-        },
-      },
     },
     dap = {
       -- adapter= codelldb_adapter,
