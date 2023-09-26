@@ -51,3 +51,16 @@ lvim.builtin.which_key.mappings["C"] = {
   f = { "<cmd>lua require'crates'.show_features_popup()<cr>", "[crates] show features" },
   D = { "<cmd>lua require'crates'.show_dependencies_popup()<cr>", "[crates] show dependencies" },
 }
+-- terminal
+lvim.builtin.which_key.mappings["t1"] = {
+  "<cmd>1ToggleTerm size=15 direction=horizontal<cr>", "Split horizontal"
+}
+lvim.builtin.which_key.mappings["t2"] = {
+  "<cmd>2ToggleTerm size=15 direction=horizontal<cr>", "Split horizontal"
+}
+lvim.builtin.which_key.mappings["t3"] = {
+  "<cmd>3ToggleTerm size=15 direction=horizontal<cr>", "Split horizontal"
+}
+lvim.builtin.which_key.mappings["t4"] = {
+  "<cmd>4ToggleTerm size=15 direction=horizontal<cr>", "Split horizontal"
+}
