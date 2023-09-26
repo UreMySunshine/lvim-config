@@ -21,3 +21,5 @@ lvim.builtin.alpha.dashboard.section.header.val = {
 lvim.builtin.alpha.dashboard.section.footer.val = ""
 -- theme
 lvim.colorscheme = "onedark"
+-- statusline
+lvim.builtin.lualine.extensions = { "toggleterm" }
