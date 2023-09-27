@@ -1,6 +1,7 @@
 -- lazygit
 local Terminal = require('toggleterm.terminal').Terminal
 local lazygit = Terminal:new({
+  count = "0",
   cmd = "lazygit",
   dir = "git_dir",
   direction = "float",
