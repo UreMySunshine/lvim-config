@@ -3,9 +3,10 @@
 -- Forum: https://www.reddit.com/r/lunarvim/
 -- Discord: https://discord.com/invite/Xb9B4Ny
 
+require "platform"
 require "plugin-config"
 require "lsp-config"
-require "platform"
 require "colorscheme"
 require "basic"
+require "extension"
 require "keybindings"
