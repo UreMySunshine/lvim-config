@@ -9,3 +9,5 @@ lvim.format_on_save = {
   enabled = true,
   timeout = 2000,
 }
+-- cmd-cmp
+lvim.builtin.cmp.cmdline.enable = true
