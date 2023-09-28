@@ -29,3 +29,5 @@ lvim.builtin.which_key.mappings["t3"] = {
 lvim.builtin.which_key.mappings["t4"] = {
   "<cmd>4ToggleTerm size=15 direction=horizontal<cr>", "Split horizontal"
 }
+-- move cursor to popup view
+lvim.keys.normal_mode["gg"] = "<C-w><C-w>"
