@@ -1,3 +1,5 @@
+vim.opt.termguicolors = true
+
 return {
   "rcarriga/nvim-notify",
   lazy = true,
@@ -18,7 +20,6 @@ return {
       -- ERROR > WARN > INFO > DEBUG > TRACE
       level = "TRACE",
     })
-
     vim.notify = notify
   end,
 }
