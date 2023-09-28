@@ -3,18 +3,14 @@ lvim.builtin.which_key.mappings["G"] = {
   o = { "<cmd>DiffviewOpen<cr>", "Open DiffView" },
   c = { "<cmd>set hidden<cr><cmd>DiffviewClose<cr><cmd>set nohidden<cr>", "Close DiffView" },
   f = { "<cmd>DiffviewFileHistory %<cr>", "File History" },
-  l = {
-    function()
-      local current_line = vim.fn.line(".")
-      local file = vim.fn.expand("%")
-      -- DiffviewFileHistory --follow -L{current_line},{current_line}:{file}
-      local cmd =
-          string.format("DiffviewFileHistory -L%s,%s:%s", current_line, current_line, file)
-      vim.cmd(cmd)
-    end,
-    "Line DiffView",
-    mode = "n",
-  },
+}
+lvim.lsp.buffer_mappings.normal_mode["<leader>Gl"] = {
+  "<cmd>.DiffviewFileHistory<cr>",
+  "File history for the current line"
+}
+lvim.lsp.buffer_mappings.visual_mode["<leader>Gl"] = {
+  "<esc><cmd>'<,'>DiffviewFileHistory<cr>",
+  "File history for the visual selection"
 }
 
 return {
