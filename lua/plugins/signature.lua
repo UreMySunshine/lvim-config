@@ -1,3 +1,5 @@
+lvim.builtin.which_key.mappings["k"] = { "<cmd>lua require('lsp_signature').toggle_float_win()<cr>", "Toggle Signature" }
+
 return {
   "ray-x/lsp_signature.nvim",
   event = "VeryLazy",
@@ -32,7 +34,7 @@ return {
       -- can be either number or function, see examples
 
       close_timeout = 4000, -- close floating window after ms when laster parameter is entered
-      fix_pos = false, -- set to true, the floating window will not auto-close until finish all parameters
+      fix_pos = true, -- set to true, the floating window will not auto-close until finish all parameters
       hint_enable = true, -- virtual hint enable
       hint_prefix = "🐼 ", -- Panda for parameter, NOTE: for the terminal not support emoji, might crash
       hint_scheme = "String",
