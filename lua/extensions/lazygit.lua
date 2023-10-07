@@ -18,4 +18,4 @@ function _lazygit_toggle()
   lazygit:toggle()
 end
 
-lvim.builtin.which_key.mappings["gG"] = { "<cmd>lua _lazygit_toggle()<CR>", "Float LazyGit" }
+lvim.builtin.which_key.mappings["GG"] = { "<cmd>lua _lazygit_toggle()<CR>", "Float LazyGit" }
