@@ -19,7 +19,7 @@ return {
 
       max_height = 12,                       -- max height of signature floating_window
       max_width = 80,                        -- max_width of signature floating_window
-      noice = false,                         -- set to true if you using noice to render markdown
+      noice = true,                          -- set to true if you using noice to render markdown
       wrap = true,                           -- allow doc/signature text wrap inside floating_window, useful if your lsp return doc/sig is too long
 
       floating_window = false,               -- show hint in a floating window, set to false for virtual text only mode
@@ -34,7 +34,7 @@ return {
       -- can be either number or function, see examples
 
       close_timeout = 4000, -- close floating window after ms when laster parameter is entered
-      fix_pos = true, -- set to true, the floating window will not auto-close until finish all parameters
+      fix_pos = false, -- set to true, the floating window will not auto-close until finish all parameters
       hint_enable = true, -- virtual hint enable
       hint_prefix = "🐼 ", -- Panda for parameter, NOTE: for the terminal not support emoji, might crash
       hint_scheme = "String",

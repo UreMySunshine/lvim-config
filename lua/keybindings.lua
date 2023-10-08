@@ -18,16 +18,16 @@ lvim.builtin.which_key.mappings["C"] = {
 }
 -- terminal
 lvim.builtin.which_key.mappings["t1"] = {
-  "<cmd>1ToggleTerm size=15 direction=horizontal<cr>", "Split horizontal"
+  "<cmd>1ToggleTerm size=15 direction=horizontal<cr>", "Split horizontal 1"
 }
 lvim.builtin.which_key.mappings["t2"] = {
-  "<cmd>2ToggleTerm size=15 direction=horizontal<cr>", "Split horizontal"
+  "<cmd>2ToggleTerm size=15 direction=horizontal<cr>", "Split horizontal 2"
 }
 lvim.builtin.which_key.mappings["t3"] = {
-  "<cmd>3ToggleTerm size=15 direction=horizontal<cr>", "Split horizontal"
+  "<cmd>3ToggleTerm size=15 direction=horizontal<cr>", "Split horizontal 3"
 }
 lvim.builtin.which_key.mappings["t4"] = {
-  "<cmd>4ToggleTerm size=15 direction=horizontal<cr>", "Split horizontal"
+  "<cmd>4ToggleTerm size=15 direction=horizontal<cr>", "Split horizontal 4"
 }
 -- move cursor to popup view
 lvim.keys.normal_mode["gg"] = "<C-w><C-w>"
