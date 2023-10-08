@@ -36,7 +36,7 @@ for _, sign in ipairs(signs) do
 end
 vim.diagnostic.config({
   virtual_text = {
-    prefix = "🦊",
+    prefix = "🐼",
   },
   signs = signs,
 })
