@@ -15,14 +15,14 @@ return {
         enable = false,
       },
       finder = {
-        default = "ref"
+        default = "ref+def+imp"
       },
       ui = {
         border = "single",
         devicon = true,
         title = true,
-        expand = '➕',
-        collapse = '➖',
+        expand = '🎋',
+        collapse = '🎍',
         lines = { '┗', '┣', '┃', '━', '┏' },
         kind = {}
       }
