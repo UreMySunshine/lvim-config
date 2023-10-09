@@ -15,7 +15,16 @@ return {
         enable = false,
       },
       finder = {
-        default = "ref+def"
+        default = "ref"
+      },
+      ui = {
+        border = "single",
+        devicon = true,
+        title = true,
+        expand = '➕',
+        collapse = '➖',
+        lines = { '┗', '┣', '┃', '━', '┏' },
+        kind = {}
       }
     })
   end,
