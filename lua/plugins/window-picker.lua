@@ -28,6 +28,8 @@ return {
           buftype = {},
         },
       },
+
+      show_prompt = false,
     }
 
     picker.setup(config)
