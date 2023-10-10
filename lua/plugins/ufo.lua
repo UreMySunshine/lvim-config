@@ -1,4 +1,4 @@
-vim.o.fillchars = [[eob: ,fold: ,foldopen:󰪦,foldsep: ,foldclose:󰪴]]
+vim.o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
 vim.o.foldcolumn = '1' -- '0' is not bad
 vim.o.foldlevel = 99   -- Using ufo provider need a large value, feel free to decrease the value
 vim.o.foldlevelstart = 99
@@ -33,7 +33,7 @@ return {
   config = function()
     local handler = function(virtText, lnum, endLnum, width, truncate)
       local newVirtText = {}
-      local suffix = (" 🐳 -- %d "):format(endLnum - lnum)
+      local suffix = (" 🐳 --> %d "):format(endLnum - lnum)
       local sufWidth = vim.fn.strdisplaywidth(suffix)
       local targetWidth = width - sufWidth
       local curWidth = 0
