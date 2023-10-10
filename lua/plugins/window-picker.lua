@@ -22,7 +22,7 @@ return {
         -- filter using buffer options
         bo = {
           -- if the file type is one of following, the window will be ignored
-          filetype = { "notify", "quickfix", "minimap", "noice", "fidget", "unknown" },
+          filetype = { "notify", "quickfix", "minimap", "noice", "fidget", "sagafinder", "unknown" },
 
           -- if the buffer type is one of following, the window will be ignored
           buftype = {},
