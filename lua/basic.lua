@@ -2,6 +2,7 @@
 vim.opt.relativenumber = true
 -- auto update buffer
 vim.opt.autoread = true
+vim.cmd [[au CursorHold * checktime]]
 -- nvim-tree filter
 lvim.builtin.nvimtree.setup.filters.custom = { "\\.git$", ".DS_Store" }
 -- autoformat

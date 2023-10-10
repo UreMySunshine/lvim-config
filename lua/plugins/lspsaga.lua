@@ -9,7 +9,7 @@ return {
         enable = false,
       },
       finder = {
-        default = "ref+def+imp"
+        default = "ref+imp"
       },
       ui = {
         border = "single",
