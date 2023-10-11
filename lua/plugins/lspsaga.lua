@@ -33,6 +33,9 @@ return {
         collapse = '🎍',
         lines = { '┗', '┣', '┃', '━', '┏' },
         kind = {}
+      },
+      rename = {
+        auto_save = true,
       }
     })
   end,
