@@ -11,13 +11,13 @@ return {
           click = "v:lua.ScSa"
         },
         {
-          sign = { name = { "GitSign*" } },
-          click = "v:lua.ScSa"
-        },
-        {
           text = { builtin.lnumfunc, " " },
           condition = { true, builtin.not_empty },
           click = "v:lua.ScLa",
+        },
+        {
+          sign = { name = { "GitSign*" } },
+          click = "v:lua.ScSa"
         },
       },
     })
