@@ -1,5 +1,5 @@
 lvim.builtin.which_key.mappings["lA"] = { "<cmd>Lspsaga code_action<cr>", "Lspsaga Code Action", noremap = true }
-lvim.builtin.which_key.mappings["lR"] = { "<cmd>Lspsaga rename<cr>", "Lspsaga Rename", noremap = true }
+lvim.builtin.which_key.mappings["lR"] = { "<cmd>Lspsaga rename<cr>", "Lspsaga rename project", noremap = true }
 lvim.builtin.which_key.mappings["lJ"] = {
   "<cmd>Lspsaga diagnostic_jump_next<cr>",
   "Lspsaga Next Diagnostic",
