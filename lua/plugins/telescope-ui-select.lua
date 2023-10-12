@@ -1,7 +1,7 @@
 return {
   'nvim-telescope/telescope-ui-select.nvim',
   lazy = true,
-  event = "VeryLazy",
+  enabled = lvim.builtin.telescope.active,
   config = function()
     require("telescope").load_extension("ui-select")
   end

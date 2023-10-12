@@ -22,7 +22,7 @@ lvim.builtin.alpha.dashboard.section.footer.val = ""
 -- theme
 vim.o.edge_better_performance = 1
 vim.o.background = 'light'
-lvim.colorscheme = "edge"
+lvim.colorscheme = "onedark"
 -- statusline
 lvim.builtin.lualine.extensions = { "toggleterm" }
 -- lsp icon
