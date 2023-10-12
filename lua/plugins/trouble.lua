@@ -10,5 +10,6 @@ lvim.builtin.which_key.mappings["t"] = {
 
 return {
   "folke/trouble.nvim",
-  cmd = { "TroubleToggle" },
+  lazy = true,
+  cmd = { "Trouble", "TroubleToggle", "TroubleRefresh" },
 }

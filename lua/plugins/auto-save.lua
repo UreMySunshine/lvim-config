@@ -1,5 +1,7 @@
 return {
   "okuuva/auto-save.nvim",
+  lazy = true,
+  event = "BufRead",
   config = function()
     require("auto-save").setup({
       trigger_events = {                              -- See :h events

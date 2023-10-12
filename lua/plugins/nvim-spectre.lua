@@ -8,6 +8,7 @@ lvim.lsp.buffer_mappings.visual_mode["<leader>sw"] = { "<esc><cmd>lua require('s
 return {
   "windwp/nvim-spectre",
   event = "BufRead",
+  lazy = true,
   config = function()
     require("spectre").setup()
   end,

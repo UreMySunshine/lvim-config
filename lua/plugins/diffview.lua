@@ -15,5 +15,6 @@ lvim.lsp.buffer_mappings.visual_mode["<leader>Gl"] = {
 
 return {
   "sindrets/diffview.nvim",
+  lazy = true,
   event = "BufRead",
 }

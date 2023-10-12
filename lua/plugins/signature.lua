@@ -3,6 +3,7 @@ lvim.builtin.which_key.mappings["k"] = { "<cmd>lua require('lsp_signature').togg
 return {
   "ray-x/lsp_signature.nvim",
   event = "VeryLazy",
+  lazy = true,
   config = function()
     local cfg = {
       debug = false,                                              -- set to true to enable debug logging

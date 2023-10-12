@@ -2,6 +2,7 @@ return {
   "s1n7ax/nvim-window-picker",
   branch = 'release/2.0',
   event = 'VeryLazy',
+  lazy = true,
   config = function()
     -- example mappings you can place in some other place
     -- An awesome method to jump to windows

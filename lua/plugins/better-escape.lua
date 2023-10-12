@@ -1,7 +1,7 @@
 return {
   "max397574/better-escape.nvim",
   lazy = true,
-  event = { "InsertEnter" },
+  event = { "CursorHold", "CursorHoldI" },
   config = function()
     require("better_escape").setup({
       mapping = { "jk", "jl" },
