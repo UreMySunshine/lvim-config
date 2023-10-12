@@ -3,7 +3,7 @@ return {
   lazy = true,
   event = "BufReadPost Cargo.toml",
   version = "v0.3.0",
-  dependencies = { "nvim-lua/plenary.nvim" },
+  dependencies = { "nvim-lua/plenary.nvim", lazy = true },
   config = function()
     require("crates").setup {
       null_ls = {
