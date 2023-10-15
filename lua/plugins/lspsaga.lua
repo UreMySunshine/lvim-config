@@ -14,8 +14,10 @@ vim.keymap.set("n", "gf", "<cmd>Lspsaga finder<cr>", { silent = true, desc = "Ls
 
 return {
   'nvimdev/lspsaga.nvim',
-  config = function()
+  init = function()
     lvim.builtin.breadcrumbs.active = false
+  end,
+  config = function()
     require('lspsaga').setup({
       lightbulb = {
         enable = false,
