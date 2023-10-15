@@ -17,9 +17,6 @@ return {
   config = function()
     lvim.builtin.breadcrumbs.active = false
     require('lspsaga').setup({
-      symbol_in_winbar = {
-        enable = true,
-      },
       lightbulb = {
         enable = false,
       },
