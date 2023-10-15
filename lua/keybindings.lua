@@ -29,3 +29,5 @@ lvim.builtin.which_key.mappings["t3"] = {
 lvim.builtin.which_key.mappings["t4"] = {
   "<cmd>4ToggleTerm size=15 direction=horizontal<cr>", "Split horizontal 4"
 }
+-- diagnostics
+lvim.builtin.which_key.mappings["lc"] = { "<cmd>vim.diagnostics.open_float()<cr>", "show current line diagnostics" }

@@ -15,9 +15,10 @@ vim.keymap.set("n", "gf", "<cmd>Lspsaga finder<cr>", { silent = true, desc = "Ls
 return {
   'nvimdev/lspsaga.nvim',
   config = function()
+    lvim.builtin.breadcrumbs.active = false
     require('lspsaga').setup({
       symbol_in_winbar = {
-        enable = false,
+        enable = true,
       },
       lightbulb = {
         enable = false,

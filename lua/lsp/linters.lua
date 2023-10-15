@@ -6,6 +6,8 @@ linters.setup({
   },
   {
     command = "eslint_d",
+    filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
+    args = { "-f", "json", "--stdin", "--stdin-filename", "$FILENAME" },
   },
   {
     command = "stylelint",
