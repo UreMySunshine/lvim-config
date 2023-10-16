@@ -7,7 +7,12 @@ return {
       integrations = {
         map.gen_integration.builtin_search(),
         map.gen_integration.gitsigns(),
-        map.gen_integration.diagnostic(),
+        map.gen_integration.diagnostic({
+          error = 'DiagnosticFloatingError',
+          warn  = 'DiagnosticFloatingWarn',
+          info  = 'DiagnosticFloatingInfo',
+          hint  = 'DiagnosticFloatingHint',
+        }),
       },
 
       -- Symbols used to display data
