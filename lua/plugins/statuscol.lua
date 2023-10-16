@@ -10,7 +10,7 @@ return {
           click = "v:lua.ScSa"
         },
         {
-          sign = { name = { "DapBreakpoint*" } },
+          sign = { name = { "DapBreakpoint*" }, auto = true },
           click = "v:lua.ScSa"
         },
         {
@@ -18,10 +18,13 @@ return {
           condition = { true, builtin.not_empty },
           click = "v:lua.ScLa",
         },
-        { text = { builtin.foldfunc }, click = "v:lua.ScFa" },
         {
-          sign = { name = { "GitSign*" } },
+          sign = { name = { "GitSign*" }, },
           click = "v:lua.ScSa"
+        },
+        {
+          text = { builtin.foldfunc, " " },
+          click = "v:lua.ScFa"
         },
       },
     })
