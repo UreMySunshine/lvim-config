@@ -14,4 +14,3 @@ lvim.format_on_save = {
 }
 -- cmd-cmp
 lvim.builtin.cmp.cmdline.enable = true
--- breadcrumbs
