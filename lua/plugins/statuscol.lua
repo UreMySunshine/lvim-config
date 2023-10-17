@@ -19,7 +19,7 @@ return {
           click = "v:lua.ScLa",
         },
         {
-          sign = { name = { "GitSign*" }, },
+          sign = { name = { "GitSign*" }, auto = true },
           click = "v:lua.ScSa"
         },
         {
