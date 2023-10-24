@@ -17,4 +17,11 @@ return {
       "Toggle Flash Search"
     },
   },
+  config = function()
+    require("flash").setup({
+      search = {
+        multi_window = false
+      }
+    })
+  end
 }
