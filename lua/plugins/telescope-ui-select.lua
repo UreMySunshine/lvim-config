@@ -1,8 +1,10 @@
+lvim.builtin.telescope.on_config_done = function(telescope)
+  pcall(telescope.load_extension, "ui-select")
+end
+
 return {
   "nvim-telescope/telescope-ui-select.nvim",
   lazy = true,
-  enabled = lvim.builtin.telescope.active,
-  event = { "User FileOpened" },
   config = function()
     -- This is your opts table
     require("telescope").setup {
